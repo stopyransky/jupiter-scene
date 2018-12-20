@@ -1,0 +1,47 @@
+{
+  "name": "three-jupiter-new",
+  "version": "0.0.1",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack-dev-server --config=webpack.dev.js",
+    "build": "webpack --config=webpack.prod.js"
+  },
+  "author": {
+    "name": "Karol Stopyra",
+    "email": "stopyransky@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.4",
+    "babel-polyfill": "^6.26.0",
+    "clean-webpack-plugin": "^1.0.0",
+    "compression-webpack-plugin": "^2.0.0",
+    "css-loader": "^2.0.0",
+    "eslint": "^5.10.0",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^2.0.0",
+    "glslify-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "raw-loader": "^1.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.2.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "dat.gui": "^0.7.3",
+    "three": "^0.99.0",
+    "tween.js": "^16.6.0"
+  }
+}

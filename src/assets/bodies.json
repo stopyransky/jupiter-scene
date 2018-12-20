@@ -1,0 +1,117 @@
+{
+    "bodies": [{
+            "name": "io",
+            "parent": "jupiter",
+            "orbit": {
+                "periapsis": 420000,
+                "apoapsis": 423400,
+                "inclination": 0.05,
+                "period": 1.769138
+            },
+
+            "radius": {
+                "x": 1830,
+                "y": 1818.7,
+                "z": 1815.3
+            },
+
+            "mass": 893.2,
+
+            "axialTilt": 0.0
+
+        },
+
+        {
+            "name": "europa",
+            "parent": "jupiter",
+            "orbit": {
+                "periapsis": 664800,
+                "apoapsis": 677400,
+                "inclination": 0.47,
+                "period": 3.551181
+            },
+
+            "radius": {
+                "x": 1560.8,
+                "y": 1560.8,
+                "z": 1560.8
+            },
+
+            "mass": 480.0,
+
+            "axialTilt": 0.1
+
+        },
+
+        {
+            "name": "ganymede",
+            "parent": "jupiter",
+            "orbit": {
+                "periapsis": 1069200,
+                "apoapsis": 1071600,
+                "inclination": 0.21,
+                "period": 7.154553
+            },
+
+            "radius": {
+                "x": 2631.2,
+                "y": 2631.2,
+                "z": 2631.2
+            },
+
+            "mass": 1481.9,
+
+            "axialTilt": 0.33
+
+        },
+
+        {
+            "name ": "callisto",
+
+            "parent": "jupiter",
+            "orbit": {
+                "periapsis": 1869000,
+                "apoapsis": 1897000,
+                "inclination": 0.51,
+                "period": 16.689018
+            },
+
+            "radius": {
+                "x": 2410.3,
+                "y": 2410.3,
+                "z": 2410.3
+            },
+
+            "mass": 1075.9,
+
+            "axialTilt": 0.0
+
+        },
+
+        {
+            "name": "jupiter",
+
+            "parent": "sun",
+
+            "orbit": {
+                "periapsis": 740742600,
+                "apoapsis": 816081455,
+                "inclination": 6.09,
+                "period": 4332.59
+            },
+
+            "radius": {
+                "x": 71492,
+                "y": 66854,
+                "z": 71492
+            },
+
+            "axialTilt": 3.13,
+
+            "axisRotation": 0.41007,
+
+            "mass": 18986000
+        }
+
+    ]
+}
