@@ -91,7 +91,7 @@ function init() {
   renderer.domElement.style.top = 100 + 'px';
   renderer.domElement.style.position = 'absolute';
   renderer.domElement.style.backgroundColor = '#000';
-  document.body.appendChild(renderer.domElement);
+  document.getElementById('contents').appendChild(renderer.domElement);
 
   camera = new THREE.PerspectiveCamera(
     45,
@@ -462,7 +462,7 @@ function onToggleShaders() {
 
 function createGUI() {
   const gui = new dat.GUI();
-
+  gui.close();
   const f01 = gui.addFolder('Camera');
 
   f01.add(controls, 'fov', 0.1, 180)
@@ -781,6 +781,7 @@ window.document.onkeydown = function(e) {
 // - antialias? -> make blurred edges (bloom?)
 // - camera fly-by navigation including: focal length smooth travel - design short camera takes
 // - cubemap sky instead of generated starfield
+// - loader
 // - shadow cast / received with sunlight
 
 /* DATA FOR PLANETS */

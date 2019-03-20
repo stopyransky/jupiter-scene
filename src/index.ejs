@@ -5,6 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      html, body {
+        font-family: monospace;
+      }
+      .screen {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #loader {
+        color: white;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 9999;
+      }
+    </style>
   </head>
-  <body bgcolor="#000"></body>
+  <body bgcolor="#000">
+    <div class='screen' id='loader'>Loading, please wait...</div>
+    <div class='screen' id='contents'></div>
+  </body>
 </html>
