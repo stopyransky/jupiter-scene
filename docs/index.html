@@ -17,17 +17,40 @@
         align-items: center;
       }
 
-      #loader {
-        color: white;
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        z-index: 9999;
+      #overlay {
+        position:fixed;
+        z-index:99999;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background:rgba(0,0,0,0.9);
+        transition: 1s 0.4s;
+      }
+      #progress {
+        height:1px;
+        background:#fff;
+        position:absolute;
+        width:0; /* will be increased by JS */
+        top:50%;
+      }
+      #progstat {
+        font-size:0.7em;
+        letter-spacing: 3px;
+        position:absolute;
+        top:50%;
+        margin-top:-40px;
+        width:100%;
+        text-align:center;
+        color:#fff;
       }
     </style>
   <link rel="shortcut icon" href="favicon.ico"></head>
   <body bgcolor="#000">
-    <div class="screen" id="loader">Loading, please wait...</div>
+    <div id="overlay">
+      <div id="progstat">Loading, please wait...</div>
+      <div id="progress"></div>
+    </div>
     <div class="screen" id="contents"></div>
-  <script type="text/javascript" src="vendors~mainac9b1cf1.js"></script><script type="text/javascript" src="mainac9b1cf1.js"></script></body>
+  <script type="text/javascript" src="vendors~mainf7862e3e.js"></script><script type="text/javascript" src="mainf7862e3e.js"></script></body>
 </html>
