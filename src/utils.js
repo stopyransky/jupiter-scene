@@ -138,8 +138,42 @@ export function makeControls({ textureMapKeys, props }) {
   };
 }
 
+function id(v) { return document.getElementById(v); }
+
 export const loadTextures = () => {
-  const loader = new THREE.TextureLoader();
+
+  var manager = new THREE.LoadingManager();
+  var overlay = id('overlay'),
+    progress = id('progress'),
+    progstat = id('progstat');
+
+  // eslint-disable-next-line no-unused-vars
+  manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
+    progstat.innerHTML = 'Loading, please wait...';
+  };
+
+
+
+  manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
+    var percent = (itemsLoaded / itemsTotal * 100).toFixed(2) +'%';
+    progress.style.width = percent;
+    progstat.innerHTML = 'Loading '+ percent;
+  };
+
+  manager.onError = function ( url ) {
+    // eslint-disable-next-line no-console
+    console.warn( 'There was an error loading ' + url );
+
+  };
+
+  manager.onLoad = function ( ) {
+    overlay.style.opacity = 0;
+    setTimeout(function(){
+      overlay.style.display = 'none';
+    }, 1200);
+  };
+
+  const loader = new THREE.TextureLoader(manager);
   const frames = [];
 
   for (let i = 0; i < 14; i++) {
